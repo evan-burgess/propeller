@@ -40,9 +40,15 @@ BuildRequires: swig
 %description
 The Seagate IDM Lock Manager (ILM) manages lease for the host using the mutexes that exist in the drive.
 
-
+## %prep: commands required *before* compiling anything
 %prep
-%setup -q -n seagate_ilm.%{version}
+
+## %setup: macro to unpack source code
+##     -q: less verbose     
+##     -n: explicitly provide source package name
+## 
+## The -n argument expands      
+%setup -q -n seagate_ilm.%{version} 
 
 %build
 make %{?_smp_mflags} V=1
