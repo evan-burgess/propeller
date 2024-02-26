@@ -140,7 +140,7 @@ changes on this repo's master branch may introduce additional dependencies.
     $ cd /work/path/lvm2-idm
     $ git checkout -b centos7_lvm2 origin/centos7_lvm2
     $ ./configure --build=x86_64-redhat-linux-gnu --host=x86_64-redhat-linux-gnu \
-      --program-prefix= \
+      --program-prefix= \  #NOT AVAILABLE \
       --disable-dependency-tracking \
       --prefix=/usr \
       --exec-prefix=/usr \
@@ -160,13 +160,13 @@ changes on this repo's master branch may introduce additional dependencies.
       --with-default-pid-dir=/run \
       --with-default-locking-dir=/run/lock/lvm \
       --with-usrlibdir=/usr/lib64 \
-      --enable-fsadm --enable-write_install \
+      --enable-fsadm --enable-write_install \ ##fsadm enabled by default \
       --with-user= --with-group= --with-device-uid=0 --with-device-gid=6 \
       --with-device-mode=0660 --enable-pkgconfig --enable-applib \
-      --enable-cmdlib --enable-dmeventd --enable-blkid_wiping \
-      --enable-python2-bindings --with-cluster=internal \
-      --with-clvmd=corosync --enable-cmirrord --with-udevdir=/usr/lib/udev/rules.d \
-      --enable-udev_sync --with-thin=internal --enable-lvmetad --with-cache=internal \
+      --enable-cmdlib --enable-dmeventd \ #blkid wiping enabled \
+      --enable-python2-bindings --with-cluster=internal \ ##both opts unavailable \
+      --with-clvmd=corosync #UNAVAIL --enable-cmirrord --with-udevdir=/usr/lib/udev/rules.d \
+      --enable-udev_sync --with-thin=internal --enable-lvmetad #UNAVAIL --with-cache=internal \
       --enable-lvmpolld --enable-lvmlockd-dlm --enable-lvmlockd-sanlock \
       --enable-lvmlockd-idm --enable-dmfilemapd
     $ make
