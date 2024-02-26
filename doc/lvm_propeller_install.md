@@ -100,6 +100,11 @@ Jun 29 03:28:12 target.test.com systemd[1]: Starting Seagate Propeller IDM Lock 
 Jun 29 03:28:12 target.test.com systemd[1]: Started Seagate Propeller IDM Lock Manager.
 
 ```
+***
+
+Completed these steps successfully...
+
+***
 
 # Build and Install LVM toolkit (with lvmlockd)
 
